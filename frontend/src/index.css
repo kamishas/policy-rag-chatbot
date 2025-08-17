@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* Custom animations and components using Tailwind's @layer */
+@layer components {
+  .glass {
+    @apply bg-white/95 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .typing-dot {
+    @apply w-2 h-2 bg-gray-600 rounded-full;
+    animation: typing 1.4s infinite ease-in-out;
+  }
+  
+  .typing-dot:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+  
+  .typing-dot:nth-child(2) {
+    animation-delay: -0.16s;
+  }
+  
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-white/10 rounded-sm;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-white/30 rounded-sm hover:bg-white/50;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .role-highlight {
+    @apply bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-400 px-3 py-2 rounded-r-lg;
+  }
+  
+  .checklist-item {
+    @apply flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors;
+  }
+  
+  .source-card {
+    @apply bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-3 hover:shadow-lg transition-all duration-200;
+  }
+}
+
+/* Custom keyframes */
+@keyframes typing {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply slideIn animation */
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
