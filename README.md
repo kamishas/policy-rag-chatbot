@@ -9,6 +9,7 @@
 A secure Retrieval-Augmented Generation (RAG) chatbot that allows users to ask natural-language questions over policy and regulatory PDF documents (e.g., military manuals, DoD regulations, SOPs). Designed for private on-premise environments where sensitive data cannot be sent to the cloud.
 
 ---
+<img width="836" height="695" alt="Screenshot 2025-08-17 142947" src="https://github.com/user-attachments/assets/e45aa990-b18c-44b0-9f0f-23a98dd09360" />
 
 ## 🧠 Features
 
